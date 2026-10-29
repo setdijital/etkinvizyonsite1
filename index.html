@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etkin Vizyon | Yapay zekâ danışmanlığı, otomasyon ve eğitim</title>
+  <meta name="description" content="Etkin Vizyon; işletmelere yapay zekâ danışmanlığı, iş süreçleri otomasyonu ve ekip eğitimleri sunar. Ücretsiz yapay zekâ check-up ile hazırlık skorunuzu öğrenin.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#" aria-label="Etkin Vizyon ana sayfa">
+        <img class="brand-logo" src="assets/logo-light.png" alt="Etkin Vizyon" width="743" height="444">
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Ana menü">
+        <div class="nav-pill">
+          <a href="#paketler">Paketler</a>
+          <a href="#hizmetler">Hizmetler</a>
+          <a href="#yontem">Yöntem</a>
+          <a href="#akademi">Akademi</a>
+          <a href="#vizyon">Vizyon</a>
+        </div>
+        <a class="btn btn-light btn-small" href="#checkup" data-open-form>Görüşme al</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Menüyü aç</span>
+        <span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <!-- Hero -->
+    <section class="hero">
+      <canvas class="hero-blob" data-blob data-palette="ember" data-seed="0" aria-hidden="true"></canvas>
+
+      <div class="wrap hero-inner">
+        <h1 class="hero-title">
+          <span class="line line-1">yapay zekâyı</span>
+          <span class="line line-2">işinize</span>
+          <span class="line line-3">odaklayın.</span>
+        </h1>
+
+        <p class="hero-lead">Etkin Vizyon, işletmenizde yapay zekânın nerede gerçekten kazandıracağını bulur, süreçlerinizi otomatikleştirir ve ekibinizi bu araçları her gün kullanacak şekilde eğitir.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#checkup">Ücretsiz check-up'a başla</a>
+          <a class="btn btn-ember" href="#checkup" data-open-form>45 dakikalık görüşme al</a>
+        </div>
+
+        <ul class="hero-facts">
+          <li class="fact fact-a"><strong>4 soru</strong><span>ücretsiz hazırlık testi</span></li>
+          <li class="fact fact-b"><strong>45 dk</strong><span>ücretsiz ilk görüşme</span></li>
+          <li class="fact fact-c"><strong>1 iş günü</strong><span>içinde size dönüyoruz</span></li>
+        </ul>
+
+        <a class="dial" href="#checkup" id="gauge-cta" aria-label="Hazırlık skorunuzu öğrenin: ücretsiz check-up">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <path id="dial-path" d="M50,50 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/>
+              <linearGradient id="dial-grad" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#ff6a2a"/>
+                <stop offset=".55" stop-color="#e2338f"/>
+                <stop offset="1" stop-color="#3a5cff"/>
+              </linearGradient>
+            </defs>
+            <g class="dial-text">
+              <text><textPath href="#dial-path" textLength="272" lengthAdjust="spacing">ücretsiz check-up  ○  hazırlık skorunuzu öğrenin  ○</textPath></text>
+            </g>
+            <g class="gauge-ticks" id="gauge-ticks"></g>
+            <circle class="gauge-track" cx="50" cy="50" r="36.5" pathLength="100" transform="rotate(135 50 50)"/>
+            <circle class="gauge-fill" id="gauge-fill" cx="50" cy="50" r="36.5" pathLength="100" transform="rotate(135 50 50)"/>
+            <text class="dial-value" id="gauge-value" x="50" y="56">?</text>
+            <text class="dial-unit" x="50" y="68" id="gauge-note">skorum</text>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section class="section" id="hizmetler">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Hizmetler</h2>
+          <p>Üç alanda çalışıyoruz. İhtiyacınıza göre birini ya da hepsini birlikte ele alıyoruz.</p>
+        </div>
+
+        <div class="services">
+          <article class="service glow-ember">
+            <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="8"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8"/></svg>
+            <h3>Yapay zekâ danışmanlığı</h3>
+            <p>İş modelinizi ve süreçlerinizi inceleyip yapay zekânın en çok değer katacağı alanları belirliyoruz. Hangi araçla, hangi bütçeyle, hangi sırayla ilerleyeceğinizi gösteren bir yol haritası çıkarıyoruz.</p>
+            <ul>
+              <li>Fırsat ve risk analizi</li>
+              <li>Araç ve tedarikçi seçimi</li>
+              <li>Veri ve KVKK değerlendirmesi</li>
+            </ul>
+          </article>
+
+          <article class="service glow-rose">
+            <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="14" height="12" rx="3"/><rect x="29" y="28" width="14" height="12" rx="3"/><path d="M19 14h8a5 5 0 0 1 5 5v9"/><path d="M28 24l4 4 4-4"/></svg>
+            <h3>İş süreçleri otomasyonu</h3>
+            <p>Teklif hazırlama, müşteri yanıtları, raporlama, fatura ve evrak işleri gibi tekrarlayan işleri mevcut yazılımlarınıza bağlı otomasyonlara dönüştürüyoruz.</p>
+            <ul>
+              <li>Süreç haritalama</li>
+              <li>Yapay zekâ destekli iş akışları</li>
+              <li>Kurulum, test ve izleme</li>
+            </ul>
+          </article>
+
+          <article class="service glow-blue">
+            <svg class="service-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 18l18-9 18 9-18 9z"/><path d="M13 22v10c0 3 5 6 11 6s11-3 11-6V22"/><path d="M42 18v12"/></svg>
+            <h3>Ekip eğitimleri</h3>
+            <p>Yöneticilerden saha ekiplerine kadar herkesin kendi işinde yapay zekâyı doğru ve güvenli kullanmasını sağlayan, uygulamalı eğitimler veriyoruz.</p>
+            <ul>
+              <li>Rol bazlı atölyeler</li>
+              <li>Şirkete özel kullanım kılavuzu</li>
+              <li>Eğitim sonrası takip</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yöntem -->
+    <section class="section" id="yontem">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Yöntem</h2>
+          <p>Her projede aynı dört adımı izliyoruz. Bir adım sonuç vermeden bir sonrakine geçmiyoruz.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Keşif</h3>
+            <p>Ekibinizle görüşüyor, süreçlerinizi ve verilerinizi yerinde inceliyoruz.</p>
+            <span class="step-time">1–2 hafta</span>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Önceliklendirme</h3>
+            <p>Fırsatları kazanç ve uygulama kolaylığına göre sıralıyor, ilk hedefi birlikte seçiyoruz.</p>
+            <span class="step-time">1 hafta</span>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Pilot uygulama</h3>
+            <p>Seçilen süreçte çalışan bir çözüm kuruyor, sonuçları gerçek verilerle ölçüyoruz.</p>
+            <span class="step-time">3–6 hafta</span>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>Yaygınlaştırma</h3>
+            <p>İşe yarayan çözümü diğer ekiplere taşıyor, çalışanlarınızı eğitiyor ve süreci izliyoruz.</p>
+            <span class="step-time">Sürekli</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Check-up -->
+    <section class="section checkup-section" id="checkup">
+      <div class="wrap checkup-grid">
+        <div class="checkup-intro">
+          <h2>Ücretsiz yapay zekâ check-up</h2>
+          <p>Dört soruyu yanıtlayın, şirketinizin yapay zekâya hazırlık skorunu hemen görün. Ardından sonucunuzu bir uzmanla 45 dakikalık ücretsiz bir görüşmede birlikte değerlendirin.</p>
+          <ul class="checkup-facts">
+            <li>Kayıt gerekmez, skor anında görünür</li>
+            <li>Görüşme ücretsizdir ve satış baskısı yoktur</li>
+          </ul>
+        </div>
+
+        <div class="checkup-panel" aria-live="polite">
+          <!-- Sorular -->
+          <form class="quiz" id="quiz" novalidate>
+            <div class="quiz-progress" aria-hidden="true"><span class="quiz-progress-bar" id="quiz-bar"></span></div>
+            <p class="quiz-count" id="quiz-count">Soru 1 / 4</p>
+
+            <fieldset class="question" data-step="0">
+              <legend>Şirketinizde yapay zekâ araçları şu an nasıl kullanılıyor?</legend>
+              <label class="option"><input type="radio" name="q1" value="0"><span>Hiç kullanılmıyor</span></label>
+              <label class="option"><input type="radio" name="q1" value="1"><span>Bazı çalışanlar kendi başına deniyor</span></label>
+              <label class="option"><input type="radio" name="q1" value="2"><span>Birkaç ekipte düzenli kullanılıyor</span></label>
+              <label class="option"><input type="radio" name="q1" value="3"><span>Belirli süreçlere entegre edildi</span></label>
+            </fieldset>
+
+            <fieldset class="question" data-step="1" hidden>
+              <legend>Tekrarlayan işleriniz ne kadar tanımlı?</legend>
+              <label class="option"><input type="radio" name="q2" value="0"><span>Kişilere bağlı, yazılı bir tarif yok</span></label>
+              <label class="option"><input type="radio" name="q2" value="1"><span>Bir kısmı yazılı</span></label>
+              <label class="option"><input type="radio" name="q2" value="2"><span>Çoğu adım adım tanımlı</span></label>
+              <label class="option"><input type="radio" name="q2" value="3"><span>Tanımlı ve süreleri ölçülüyor</span></label>
+            </fieldset>
+
+            <fieldset class="question" data-step="2" hidden>
+              <legend>Şirket verileriniz nerede duruyor?</legend>
+              <label class="option"><input type="radio" name="q3" value="0"><span>Dağınık: e-posta, Excel ve kâğıt</span></label>
+              <label class="option"><input type="radio" name="q3" value="1"><span>Birbirinden ayrı birkaç programda</span></label>
+              <label class="option"><input type="radio" name="q3" value="2"><span>Ana sistemlerde ama birbirine bağlı değil</span></label>
+              <label class="option"><input type="radio" name="q3" value="3"><span>Merkezi, düzenli ve erişilebilir</span></label>
+            </fieldset>
+
+            <fieldset class="question" data-step="3" hidden>
+              <legend>Ekibiniz yapay zekâ konusunda ne kadar hazır?</legend>
+              <label class="option"><input type="radio" name="q4" value="0"><span>Çekingen ya da ilgisiz</span></label>
+              <label class="option"><input type="radio" name="q4" value="1"><span>Merak ediyor ama bilgisi az</span></label>
+              <label class="option"><input type="radio" name="q4" value="2"><span>Temel kullanımı biliyor</span></label>
+              <label class="option"><input type="radio" name="q4" value="3"><span>Eğitim almış, kendi fikirlerini üretiyor</span></label>
+            </fieldset>
+
+            <div class="quiz-nav">
+              <button type="button" class="btn btn-ghost btn-small" id="quiz-back" hidden>Geri</button>
+              <button type="button" class="link-btn" data-open-form>Soruları atla, doğrudan görüşme iste</button>
+            </div>
+          </form>
+
+          <!-- Sonuç -->
+          <div class="result" id="result" hidden tabindex="-1">
+            <div class="score">
+              <svg class="score-ring" viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                  <linearGradient id="score-grad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ff6a2a"/>
+                    <stop offset=".55" stop-color="#e2338f"/>
+                    <stop offset="1" stop-color="#3a5cff"/>
+                  </linearGradient>
+                </defs>
+                <circle class="score-track" cx="60" cy="60" r="52"/>
+                <circle class="score-fill" id="score-fill" cx="60" cy="60" r="52"/>
+              </svg>
+              <div class="score-value"><span id="score-num">0</span><small>/100</small></div>
+            </div>
+            <div class="result-text">
+              <p class="result-level" id="result-level"></p>
+              <p id="result-desc"></p>
+              <p class="result-pack" id="result-pack"></p>
+            </div>
+            <div class="result-actions">
+              <button type="button" class="btn btn-light" data-open-form>Sonucumu bir uzmanla konuşmak istiyorum</button>
+              <button type="button" class="link-btn" id="quiz-restart">Testi yeniden çöz</button>
+            </div>
+          </div>
+
+          <!-- Görüşme formu -->
+          <form class="booking" id="booking" hidden novalidate>
+            <h3 id="booking-title">45 dakikalık görüşme talep edin</h3>
+            <p class="booking-note" id="booking-note">Size en geç bir iş günü içinde dönüp uygun bir saat belirliyoruz.</p>
+
+            <div class="field">
+              <label for="name">Ad soyad</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <p class="field-error" id="name-error" hidden>Lütfen adınızı ve soyadınızı yazın.</p>
+            </div>
+            <div class="field">
+              <label for="phone">Telefon</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx" required>
+              <p class="field-error" id="phone-error" hidden>Telefon numarasını 05xx xxx xx xx biçiminde yazın.</p>
+            </div>
+            <label class="consent">
+              <input type="checkbox" id="consent" required>
+              <span>Bilgilerimin yalnızca görüşmeyi planlamak için kullanılmasını kabul ediyorum (KVKK).</span>
+            </label>
+            <p class="field-error" id="consent-error" hidden>Devam etmek için onay kutusunu işaretleyin.</p>
+
+            <button type="submit" class="btn btn-light btn-block">Görüşme talebini gönder</button>
+          </form>
+
+          <!-- Onay -->
+          <div class="confirm" id="confirm" hidden tabindex="-1">
+            <h3 id="confirm-title">Görüşme talebiniz alındı</h3>
+            <p id="confirm-text">En geç bir iş günü içinde sizi arayıp 45 dakikalık görüşmenin saatini birlikte belirleyeceğiz.</p>
+            <a class="btn btn-ghost" data-wa href="#" target="_blank" rel="noopener">Beklemeden WhatsApp'tan yazın</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paketler -->
+    <section class="section" id="paketler">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Paketler</h2>
+          <p>Nereden başlayacağınızı bilmiyorsanız check-up skorunuz size uygun paketi gösterir. Fiyat, ekip büyüklüğünüze göre görüşmede netleşir.</p>
+        </div>
+
+        <div class="packages">
+          <article class="package">
+            <h3>Keşif</h3>
+            <p class="package-for">Yapay zekâya yeni başlayan işletmeler için</p>
+            <p class="package-time">2 hafta</p>
+            <ul>
+              <li>Süreç ve veri incelemesi</li>
+              <li>En kazançlı 5 fırsatın raporu</li>
+              <li>6 aylık yol haritası</li>
+              <li>Yönetim ekibine sunum</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="#checkup" data-open-form data-package="Keşif">Keşif paketini konuşalım</a>
+          </article>
+
+          <article class="package package-featured">
+            <p class="package-badge">En çok tercih edilen</p>
+            <h3>Dönüşüm</h3>
+            <p class="package-for">Somut sonuç görmek isteyen işletmeler için</p>
+            <p class="package-time">6–8 hafta</p>
+            <ul>
+              <li>Keşif paketindeki her şey</li>
+              <li>2 sürecin uçtan uca otomasyonu</li>
+              <li>Kullanan ekiplere uygulamalı eğitim</li>
+              <li>Önce ve sonra ölçüm raporu</li>
+            </ul>
+            <a class="btn btn-light btn-block" href="#checkup" data-open-form data-package="Dönüşüm">Dönüşüm paketini konuşalım</a>
+          </article>
+
+          <article class="package">
+            <h3>Ortaklık</h3>
+            <p class="package-for">Yapay zekâyı sürekli büyütmek isteyenler için</p>
+            <p class="package-time">Aylık</p>
+            <ul>
+              <li>Her ay yeni otomasyonlar</li>
+              <li>Mevcut çözümlerin bakımı</li>
+              <li>Ekip için sürekli Akademi erişimi</li>
+              <li>Aylık yönetim değerlendirmesi</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="#checkup" data-open-form data-package="Ortaklık">Ortaklık paketini konuşalım</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Akademi -->
+    <section class="section" id="akademi">
+      <div class="wrap akademi-grid">
+        <div class="section-head">
+          <h2>Akademi</h2>
+          <p>Araçlar ekibiniz kullandığı sürece işe yarar. Etkin Vizyon Akademi, çalışanlarınızın yapay zekâyı kendi işlerinde güvenle kullanmasını sağlar. Eğitimler şirketinizde ya da çevrim içi verilir.</p>
+          <a class="btn btn-light" href="#checkup" data-open-form data-package="Akademi">Ekibim için eğitim planı iste</a>
+        </div>
+
+        <ul class="courses">
+          <li class="course">
+            <div>
+              <h3>Yöneticiler için yapay zekâ</h3>
+              <p>Yapay zekâ ile neyin mümkün olduğunu, nasıl yatırım kararı verileceğini ve riskleri nasıl yöneteceğinizi öğrenin.</p>
+            </div>
+            <p class="course-meta">Yarım gün<br>Yönetim ekipleri</p>
+          </li>
+          <li class="course">
+            <div>
+              <h3>Her gün yapay zekâ atölyesi</h3>
+              <p>E-posta, rapor, sunum ve analiz işlerinde yapay zekâ asistanlarını doğru komutlarla kullanma pratiği.</p>
+            </div>
+            <p class="course-meta">1 gün<br>Tüm çalışanlar</p>
+          </li>
+          <li class="course">
+            <div>
+              <h3>Otomasyon uygulayıcısı</h3>
+              <p>Kod yazmadan iş akışı kurmayı, araçları birbirine bağlamayı ve kurulan otomasyonları yönetmeyi öğrenin.</p>
+            </div>
+            <p class="course-meta">3 oturum<br>Operasyon ekipleri</p>
+          </li>
+          <li class="course">
+            <div>
+              <h3>Güvenli ve KVKK uyumlu kullanım</h3>
+              <p>Hangi verinin hangi araçla paylaşılabileceğini ve şirket içi kullanım kurallarını netleştirin.</p>
+            </div>
+            <p class="course-meta">2 saat<br>Tüm çalışanlar</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Vizyon -->
+    <section class="section vizyon" id="vizyon">
+      <canvas class="vizyon-blob" data-blob data-palette="violet" data-seed="7" aria-hidden="true"></canvas>
+      <div class="wrap vizyon-inner">
+        <h2 class="outline-title">vizyon</h2>
+        <div class="vizyon-body">
+          <p class="vizyon-statement">Yapay zekânın büyük şirketlerin ayrıcalığı olmadığına inanıyoruz. Her ölçekteki işletmenin bu teknolojiyi anlayarak, ölçerek ve kendi ekibiyle kullanabilmesini istiyoruz.</p>
+          <div class="vizyon-points">
+            <div>
+              <h3>Netlik</h3>
+              <p>Teknik terimlerle değil, işinizin diliyle konuşuruz. Her önerinin ne kazandıracağını rakamla gösteririz.</p>
+            </div>
+            <div>
+              <h3>Etkinlik</h3>
+              <p>Gösterişli denemeler yerine her gün kullanılan, zaman ve maliyet kazandıran çözümler kurarız.</p>
+            </div>
+            <div>
+              <h3>Kalıcılık</h3>
+              <p>Bilgiyi kendimize saklamayız. Ekibiniz kurulan sistemi anlar, sahiplenir ve geliştirir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kapanış CTA -->
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <h2>Nereden başlayacağınızı 45 dakikada birlikte bulalım.</h2>
+        <div class="closing-actions">
+          <a class="btn btn-light" href="#checkup" data-open-form>Görüşme al</a>
+          <a class="btn btn-ghost" data-wa href="#" target="_blank" rel="noopener">WhatsApp'tan yazın</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#" aria-label="Etkin Vizyon ana sayfa">
+        <img class="brand-logo brand-logo-lg" src="assets/logo-light.png" alt="Etkin Vizyon" width="743" height="444" loading="lazy">
+      </a>
+      <p>Yapay zekâ danışmanlığı, iş süreçleri otomasyonu ve ekip eğitimleri.</p>
+      <p class="footer-copy">© <span id="year">2026</span> Etkin Vizyon</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.7 11-10.7s11 4.8 11 10.7-4.9 10.9-10.9 10.9zm6-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+    <span class="wa-label">WhatsApp</span>
+  </a>
+
+  <script src="blob.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
