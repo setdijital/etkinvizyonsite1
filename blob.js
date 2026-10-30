@@ -68,7 +68,7 @@
 
       float minD = 10.0;
       bool hit = false;
-      for (int i = 0; i < 72; i++) {
+      for (int i = 0; i < ${lowPower ? 56 : 72}; i++) {
         float d = map(ro + rd * t);
         minD = min(minD, d);
         if (d < 0.0015) { hit = true; break; }
@@ -150,11 +150,10 @@
 
     function resize() {
       const rect = canvas.getBoundingClientRect();
-      let scale = Math.min(window.devicePixelRatio || 1, 1.5);
-      if (rect.width < 600) scale *= 0.8;
-      // Piksel sayısını sınırla: telefonda çok daha düşük tutulur, yoksa
-      // zayıf cihazlarda sayfa donabilir ya da tarayıcı sekmeyi kapatabilir
-      const maxPixels = lowPower ? 2.2e5 : 1.1e6;
+      // Telefon ekranları yoğun (2x–3x), düşük çözünürlük pikselli görünür
+      let scale = Math.min(window.devicePixelRatio || 1, lowPower ? 2 : 1.5);
+      // Piksel sayısını sınırla, yoksa zayıf cihazlarda sayfa donabilir
+      const maxPixels = lowPower ? 7.5e5 : 1.1e6;
       const px = rect.width * rect.height * scale * scale;
       if (px > maxPixels) scale *= Math.sqrt(maxPixels / px);
       canvas.width = Math.max(1, Math.round(rect.width * scale));
