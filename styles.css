@@ -31,7 +31,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; overflow-x: hidden; overflow-x: clip; }
 
 body {
   margin: 0;
@@ -212,7 +212,8 @@ a { color: inherit; }
 .dial-unit { font: 400 6px var(--font); fill: var(--soft); text-anchor: middle; }
 
 /* Bölümler */
-.section { position: relative; padding: clamp(88px, 11vw, 150px) 0; }
+/* Bölümlerin arkasındaki ışımalar ekran dışına taşmasın */
+.section { position: relative; padding: clamp(88px, 11vw, 150px) 0; overflow: hidden; overflow: clip; }
 .section-head { max-width: 44rem; margin-bottom: clamp(40px, 6vw, 72px); }
 .section-head h2 { text-transform: lowercase; }
 .section-head p { margin-top: 18px; color: var(--soft); font-size: 1.125rem; max-width: 36em; }
@@ -495,7 +496,7 @@ a { color: inherit; }
 
   .hero-inner { display: flex; flex-direction: column; align-items: stretch; }
   .hero-title { display: block; }
-  .hero-title .line { font-size: clamp(3rem, 15vw, 6rem); }
+  .hero-title .line { font-size: clamp(2.6rem, 13.5vw, 6rem); white-space: normal; }
   .line-3 { text-align: left; justify-self: start; }
   .hero-blob { left: 55%; top: 230px; width: 150vw; }
   .line, .fact, .hero-lead, .hero-actions, .dial { grid-row: auto; grid-column: auto; }
