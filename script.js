@@ -194,6 +194,37 @@ $$("[data-open-form]").forEach((el) =>
   el.addEventListener("click", () => openBooking(el.dataset.package))
 );
 
+/* Sayfa içi bağlantılar: sabit menünün altında, doğru noktada durur.
+   Görüşme butonları doğrudan forma, check-up bağlantıları telefonda doğrudan sorulara gider. */
+const header = $(".site-header");
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function scrollToEl(el) {
+  const top = el.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 16;
+  window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? "auto" : "smooth" });
+}
+
+$$('a[href^="#"]').forEach((a) =>
+  a.addEventListener("click", (e) => {
+    const id = a.getAttribute("href");
+    if (id === "#") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      return;
+    }
+    const section = $(id);
+    if (!section) return;
+    e.preventDefault();
+    let target = $(".section-head, .checkup-intro, .outline-title", section) || section;
+    if (id === "#checkup" && (a.hasAttribute("data-open-form") || window.innerWidth <= 900)) {
+      target = $(".checkup-panel");
+    }
+    // Form açılması gibi içerik değişiklikleri yerleştikten sonra kaydır
+    requestAnimationFrame(() => scrollToEl(target));
+    history.replaceState(null, "", id);
+  })
+);
+
 /* Form doğrulama ve gönderim */
 function normalizePhone(v) {
   let d = v.replace(/\D/g, "");

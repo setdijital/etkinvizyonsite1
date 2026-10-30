@@ -1,6 +1,8 @@
 // Akışkan form: WebGL ile çizilen, yavaşça şekil değiştiren parlak damla
 (() => {
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Dokunmatik ve küçük ekranlı cihazlar
+  const lowPower = matchMedia("(pointer: coarse), (max-width: 900px)").matches;
 
   // Kosinüs paletleri: renk = a + b * cos(2π(c·t + d))
   const PALETTES = {
@@ -150,8 +152,9 @@
       const rect = canvas.getBoundingClientRect();
       let scale = Math.min(window.devicePixelRatio || 1, 1.5);
       if (rect.width < 600) scale *= 0.8;
-      // Piksel sayısını sınırla, büyük ekranda da akıcı kalsın
-      const maxPixels = 1.1e6;
+      // Piksel sayısını sınırla: telefonda çok daha düşük tutulur, yoksa
+      // zayıf cihazlarda sayfa donabilir ya da tarayıcı sekmeyi kapatabilir
+      const maxPixels = lowPower ? 2.2e5 : 1.1e6;
       const px = rect.width * rect.height * scale * scale;
       if (px > maxPixels) scale *= Math.sqrt(maxPixels / px);
       canvas.width = Math.max(1, Math.round(rect.width * scale));
@@ -169,10 +172,22 @@
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     }
 
+    // Telefonda saniyede 30 kare yeterli, pil ve işlemciyi yormaz
+    let lastFrame = 0;
     function loop(now) {
-      draw(now - start);
+      if (!lowPower || now - lastFrame > 31) {
+        lastFrame = now;
+        draw(now - start);
+      }
       raf = requestAnimationFrame(loop);
     }
+
+    // Grafik bağlamı kaybolursa (zayıf cihazlarda olabilir) yedek görünüme geç
+    canvas.addEventListener("webglcontextlost", (e) => {
+      e.preventDefault();
+      stop();
+      canvas.classList.add("blob-fallback");
+    });
     function play() {
       if (running || !visible || reduceMotion) return;
       running = true;
